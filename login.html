@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .login-button {
+            background-color: #00cc00;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .login-button:hover {
+            background-color: #009900;
+        }
+
+        .google-button {
+            background-color: #4285f4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .google-button:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login Page</h1>
+        <div class="input-group">
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+        <button class="login-button" onclick="login('admin')">Admin</button>
+        <button class="login-button" onclick="login('non-admin')">Non-Admin</button>
+        <a href="https://accounts.google.com/v3/signin/identifier?hl=en-GB&ifkv=AYZoVhd5-nSEkSK09hKGVPSS3dsHST5FA_ylh1tZYZqoT516KKuzrBOSF4NciUFlAiCqSQI7z1SntA&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-418572770%3A1694367994443589&theme=glif">        <button class="google-button" onclick="loginWithGoogle()">Sign in with Google</button></a>
+
+    </div>
+
+    <script>
+        function login(role) {
+            // Perform login logic here based on the selected role (admin or non-admin).
+            alert('Logging in as ' + role);
+        }
+
+        function loginWithGoogle() {
+            // Perform Google login logic here.
+            alert('Logging in with Google');
+        }
+    </script>
+</body>
+</html>
